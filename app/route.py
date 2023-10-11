@@ -10,7 +10,7 @@ class Route(NamedTuple):
     arrival_time: str
 
 
-def get_routes(tram_id: int, station_id: int, destination_id: int) -> List[Route]:
+def get_routes(tram_id: int, station_id: int, destination_id: int, time: int=30) -> List[Route]:
     url = 'https://xn--c1aff6b0c.xn--p1ai/rasp/load_station.php'
     headers = {'Content-type': 'application/x-www-form-urlencoded'}
     data = {'route': tram_id,
@@ -19,7 +19,7 @@ def get_routes(tram_id: int, station_id: int, destination_id: int) -> List[Route
             'dt': get_current_date(),
             'th_rasp': get_current_hours(),
             'tm_rasp': get_current_minutes(),
-            'timeint': 30}
+            'timeint': time}
     response = requests.post(url, headers=headers, data=data)
 
     routes = list()
