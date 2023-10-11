@@ -14,7 +14,7 @@ def get_values_from_tag(text: str, tag_text: str) -> Dict[str, int]:
     elements = {}
     for tag in tags:
         text = tag.get_text()
-        value = tag[tag_text]
+        value = int(tag[tag_text])
         elements[text] = value
 
     return elements
