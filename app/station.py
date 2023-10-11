@@ -20,7 +20,7 @@ def get_stations(tram_id: int) -> List[Station]:
     stations = list()
     for name, id in values.items():
         stations.append(Station(name, id))
-    return stations
+    return stations[1:]
 
 
 def get_destinations(tram_id: int, station_id: int) -> List[Station]:
@@ -35,5 +35,5 @@ def get_destinations(tram_id: int, station_id: int) -> List[Station]:
     stations = list()
     for name, id in values.items():
         stations.append(Station(name, id))
-    return stations
+    return stations[1:]
 
