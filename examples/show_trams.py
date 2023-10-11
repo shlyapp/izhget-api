@@ -1,4 +1,4 @@
-from app.tram import get_trams
+from src.tram import get_trams
 
 
 trams = get_trams()

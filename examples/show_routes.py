@@ -1,6 +1,6 @@
-from app.station import get_stations, get_destinations
-from app.tram import get_trams
-from app.route import get_routes
+from src.station import get_stations, get_destinations
+from src.tram import get_trams
+from src.route import get_routes
 
 
 tram = get_trams()[2]

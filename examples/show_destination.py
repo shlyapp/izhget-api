@@ -1,5 +1,5 @@
-from app.station import get_stations, get_destinations
-from app.tram import get_trams
+from src.station import get_stations, get_destinations
+from src.tram import get_trams
 
 
 tram = get_trams()[2]
