@@ -20,15 +20,15 @@ def get_values_from_tag(text: str, tag_text: str) -> Dict[str, int]:
     return elements
 
 
-def get_current_date():
+def get_current_date() -> str:
     return datetime.now(tz).strftime('%d.%m.%Y')
 
 
-def get_current_hours():
+def get_current_hours() -> str:
     return datetime.now(tz).strftime('%H')
 
 
-def get_current_minutes():
+def get_current_minutes() -> str:
     return datetime.now(tz).strftime('%M')
 
 
